@@ -72,8 +72,8 @@ export default defineComponent({
     const isFocus = ref(false)
 
     const handleInput = ({ target }: { target: HTMLInputElement }) => {
-      emit('input', target.value)
-      emit('update:value', target.value)
+      emit('input', target.value) // handler用
+      emit('update:value', target.value) // v-model用
     }
 
     const handleChange = ({ target }: {target: HTMLInputElement }) => {

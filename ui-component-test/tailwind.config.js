@@ -5,7 +5,12 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    position: ['after'],
+    transform: ['after'],
+    translate: ['after'],
+    inset: ['after'],
+    backgroundImage: ['after'],
+    gradientColorStops: ['after']
   },
-  plugins: [],
+  plugins: [require('tailwindcss-pseudo-elements')],
 }
