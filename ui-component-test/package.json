@@ -4,8 +4,9 @@
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "build": "yarn run tsc && yarn run test && vite build",
+    "serve": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.22.0",
@@ -29,7 +30,13 @@
     "tailwindcss-pseudo-elements": "^2.0.0",
     "typescript": "^4.3.2",
     "vite": "^2.5.4",
-    "vue-tsc": "^0.3.0"
+    "vue-tsc": "^0.3.0",
+    "jest": "^26.0.0",
+    "ts-jest": "^26.0.0",
+    "babel-jest": "^26.0.0",
+    "@types/jest": "^26.0.0",
+    "vue-jest": "5.0.0-alpha.10",
+    "@vue/test-utils": "2.0.0-rc.6"
   },
   "license": "MIT",
   "msw": {
