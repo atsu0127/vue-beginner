@@ -1,5 +1,5 @@
 {
-  "name": "ui-component-test",
+  "name": "atsu0127-ui-component-test",
   "version": "1.0.0",
   "repository": "https://github.com/atsu0127/vue-beginner.git",
   "scripts": {
@@ -10,8 +10,8 @@
     "test": "jest"
   },
   "types": "sec/index.ts",
-  "module": "./dist/ui-component-test.es.js",
-  "main": "./dist/ui-component-test.umd.js",
+  "module": "./dist/atsu0127-ui-component-test.es.js",
+  "main": "./dist/atsu0127-ui-component-test.umd.js",
   "files": [
     "dist",
     "src/index.ts",
@@ -19,8 +19,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/ui-component-test.es.js",
-      "require": "./dist/ui-component-test.umd.js"
+      "import": "./dist/atsu0127-ui-component-test.es.js",
+      "require": "./dist/atsu0127-ui-component-test.umd.js"
     },
     "./style": "./dist/style.css"
   },
