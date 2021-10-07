@@ -1,5 +1,6 @@
 <script lang="ts">
-import { defineComponent, computed, PropType, ref } from 'vue'
+import { defineComponent, computed, PropType } from 'vue'
+import { useFocus } from '../../composables/eventHandler'
 
 export default defineComponent({
   name: 'InputRadio',
@@ -26,24 +27,18 @@ export default defineComponent({
     focus: (event: Event) => true,
     blur: (event: Event) => true,
   },
-  setup(props, { emit }) {
-    const isFocus = ref(false)
-    
+  setup(props, { emit }) {    
     const handleChange = () => {
       if (props.disabled) return
 
       emit('update:checked', props.value)
     }
 
-    const handleFocus = (event: Event) => {
-      isFocus.value = true
-      emit('focus', event)
-    }
-
-    const handleBlur = (event: Event) => {
-      isFocus.value = false
-      emit('blur', event)
-    }
+    const {
+      isFocus,
+      handleFocus,
+      handleBlur
+    } = useFocus({ eventName: 'focus' }, { eventName: 'blur' })
 
     const isChecked = computed(() => props.value === props.checked)
 

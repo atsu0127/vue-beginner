@@ -26,6 +26,7 @@ export default defineComponent({
       <div
         v-if="isOneLine || n >= 1"
         :key="`line-${n}`"
+        data-test="long-loader"
         class="
           relative
           w-full
@@ -49,6 +50,7 @@ export default defineComponent({
       <div
         v-else
         :key="`line-${n}`"
+        data-test="half-loader"
         class="
           relative
           w-1/2
