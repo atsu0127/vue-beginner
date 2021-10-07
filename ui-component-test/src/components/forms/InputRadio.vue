@@ -114,7 +114,7 @@ export default defineComponent({
         border-2 border-gray-200 birder-solid
         rounded-full
       "
-      :class="`${checkedRingClass} ${fucusedClass}`"
+      :class="`${checkedRingClass} ${focusedClass}`"
     >
       <span v-if="isChecked" class="w-3 h-3 rounded-full" :class="`${checkedCircleClass}`" />
     </div>
